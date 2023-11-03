@@ -2,13 +2,13 @@
 if __name__ == "__main__":
     import sys
 
-    nargs = len(sys.argv) - 1
-    if nargs != 3:
+    arg_len = len(sys.argv) - 1
+    if arg_len != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
 
-    op = sys.argv[2]
-    if op != '+' and op != '-' and op != '*' and op != '/':
+    my_opr = sys.argv[2]
+    if my_opr != '+' and my_opr != '-' and my_opr != '*' and my_opr != '/':
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
 
@@ -16,11 +16,11 @@ if __name__ == "__main__":
     a = int(sys.argv[1])
     b = int(sys.argv[3])
 
-    if op == '+':
+    if my_opr == '+':
         print("{} + {} = {}".format(a, b, add(a, b)))
-    elif op == '-':
+    elif my_opr == '-':
         print("{} - {} = {}".format(a, b, sub(a, b)))
-    elif op == '*':
+    elif my_opr == '*':
         print("{} * {} = {}".format(a, b, mul(a, b)))
     else:
         print("{} / {} = {}".format(a, b, div(a, b)))
