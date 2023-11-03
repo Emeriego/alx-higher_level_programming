@@ -4,60 +4,64 @@ listint_t *create_node(int n);
 /**
  * insert_node - function puts node into a list of ints
  * @head: pointer to head.
- * @number:item tobe added
+ * @num:item tobe added
  * Return:returns  pointer to newly created node, NULL on failure
  */
-listint_t *insert_node(listint_t **head, int number)
+listint_t *insert_node(listint_t **head, int num)
 {
-	listint_t *cur_node = NULL, *new_node = NULL;
+	listint_t *current = NULL;
+	listint_t *nn = NULL;
 
-	if (!head)
+	if (head == NULL)
+	{
 		return (NULL);
+	}
 	else if (!(*head))
 	{
-		new_node = create_node(number);
-		*head = new_node;
-		return (new_node);
+		nn = create_node(num);
+		*head = nn;
+		return (nn);
 	}
-	cur_node = *head;
-	while (cur_node)
+	current = *head;
+	while (current)
 	{
-		/* need to insert at head */
-		if (cur_node->n >= number)
+		if (current->n >= num)
 		{
-			new_node = create_node(number);
-			new_node->next = cur_node;
-			*head = new_node;
-			return (new_node);
+			nn = create_node(num);
+			nn->next = current;
+			*head = nn;
+			return (nn);
 		}
-		else if (cur_node->n <= number)
+		else if (current->n <= num)
 		{
-			if (!cur_node->next || cur_node->next->n >= number)
+			if (!current->next || current->next->n >= num)
 			{
-				new_node = create_node(number);
-				new_node->next = cur_node->next;
-				cur_node->next = new_node;
-				return (cur_node->next);
+				nn = create_node(num);
+				nn->next = current->next;
+				current->next = nn;
+				return (current->next);
 			}
 		}
-		cur_node = cur_node->next;
+		current = current->next;
 	}
-	return (NULL); /* failed */
+	return (NULL); 
 }
 /**
- * create_node - creates a new node for the LL
- * @n: data to insert into new node
+ * create_node - func creates new node
+ * @n: item tobe added
  *
- * Return: pointer to newly allocated node
+ * Return: returns pter to newly allocated node
  */
 listint_t *create_node(int n)
 {
-	listint_t *ret = NULL;
+	listint_t *ter = NULL;
 
-	ret = malloc(sizeof(listint_t));
-	if (!ret)
+	ter = malloc(sizeof(listint_t));
+	if (ter == NULL)
+	{
 		return (NULL);
-	ret->next = NULL;
-	ret->n = n;
-	return (ret);
+	}
+	ter->next = NULL;
+	ter->n = n;
+	return (ter);
 }
