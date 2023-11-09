@@ -33,9 +33,8 @@ void print_python_bytes(PyObject *p)
 }
 
 /**
- * print_python_list - gives data of the PyListObject
- *
- * @p: the PyObject
+ * print_python_list - gets object bytes.
+ * @p: Object input
  */
 
 void print_python_list(PyObject *p)
@@ -62,3 +61,4 @@ void print_python_list(PyObject *p)
 		}
 	}
 }
+
