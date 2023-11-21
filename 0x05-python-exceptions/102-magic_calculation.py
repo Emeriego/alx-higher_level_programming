@@ -11,5 +11,5 @@ def magic_calculation(a, b):
         except Exception:
             outcome = b + a
             break
-    
+
     return outcome
