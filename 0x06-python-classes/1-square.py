@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 
-"""Task to define a class Square."""
+"""Task to define a class Square.
+"""
 
 class Square:
-    """Class represents a square."""
+    """Class represents a square.
+    """
 
     def __init__(self, size):
         """Initialize a Square here.

@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Task 8 defines a class Square.
 """
-
 class Square:
     """Class Represent a square.
     """
@@ -63,8 +62,8 @@ class Square:
             return
 
         [print("") for i in range(0, self.__position[1])]
-        for i in range(0, self.__size):
-            [print(" ", end="") for j in range(0, self.__position[0])]
+        for item in range(0, self.__size):
+            [print(" ", end="") for m in range(0, self.__position[0])]
             [print("#", end="") for k in range(0, self.__size)]
             print("")
 
@@ -74,9 +73,9 @@ class Square:
         if self.__size != 0:
             [print("") for i in range(0, self.__position[1])]
         for i in range(0, self.__size):
-            [print(" ", end="") for j in range(0, self.__position[0])]
+            [print(" ", end="") for m in range(0, self.__position[0])]
             [print("#", end="") for k in range(0, self.__size)]
 
-            if i != self.__size - 1:
+            if item != self.__size - 1:
                 print("")
         return ("")
