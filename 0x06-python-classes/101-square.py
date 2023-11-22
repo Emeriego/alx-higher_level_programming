@@ -61,7 +61,7 @@ class Square:
             print("")
             return
 
-        [print("") for i in range(0, self.__position[1])]
+        [print("") for item in range(0, self.__position[1])]
         for item in range(0, self.__size):
             [print(" ", end="") for m in range(0, self.__position[0])]
             [print("#", end="") for k in range(0, self.__size)]
@@ -71,7 +71,7 @@ class Square:
         """Define the print() representation of a Square.
         """
         if self.__size != 0:
-            [print("") for i in range(0, self.__position[1])]
+            [print("") for item in range(0, self.__position[1])]
         for item in range(0, self.__size):
             [print(" ", end="") for m in range(0, self.__position[0])]
             [print("#", end="") for k in range(0, self.__size)]
