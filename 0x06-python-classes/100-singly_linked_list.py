@@ -41,6 +41,7 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 class SinglyLinkedList:
     """Class Represents an S_list.
     """
@@ -52,8 +53,6 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """Class to Insert a new Node to List.
-        The node is inserted into the list at the correct
-        ordered numerical position.
         Args:
             value (Node): Node to be inserted.
         """
