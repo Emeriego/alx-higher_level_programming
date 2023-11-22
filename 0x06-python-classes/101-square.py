@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Task 8 defines a class Square.
 """
+
+
 class Square:
     """Class Represent a square.
     """
@@ -23,7 +25,6 @@ class Square:
     def size(self, value):
         """Sets the size of the square.
         """
-        return (self.__size)
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -40,7 +41,6 @@ class Square:
     def position(self, value):
         """Sets the size of the square.
         """
-        return (self.__size)
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
