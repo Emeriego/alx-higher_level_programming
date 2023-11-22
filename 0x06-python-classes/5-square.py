@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Task Defines a class Square."""
 
+
 class Square:
     """Class Represents a square object."""
 
