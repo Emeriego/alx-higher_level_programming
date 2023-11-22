@@ -18,13 +18,6 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Sets the size of square.
-        Raises:
-        TypeError: The ``Raises`` section is a list of all exceptions
-            that are relevant to the interface.
-        ValueError: If `param2` is equal to `param1`.
-
-        """
         return (self.__size)
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
