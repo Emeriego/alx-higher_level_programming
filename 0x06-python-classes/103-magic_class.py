@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""Define a MagicClass matching exactly a bytecode provided by Alx."""
+"""Task 10 Defines a MagicClass matching exactly a bytecode provided by Alx.
+"""
+
 
 import math
 
 
 class MagicClass:
-    """Represent a circle."""
+    """Class Represents a circle.
+    """
 
     def __init__(self, radius=0):
-        """Initialize a MagicClass.
+        """This Initializes a MagicClass.
 
         Arg:
             radius (float or int): The radius of the new MagicClass.
@@ -19,9 +22,11 @@ class MagicClass:
         self.__radius = radius
 
     def area(self):
-        """Return the area of the MagicClass."""
+        """This Returns the area of the MagicClass.
+        """
         return (math.pi * self.__radius ** 2)
 
     def circumference(self):
-        """Return the circumference of the MagicClass."""
+        """This Returns the circumference of the MagicClass.
+        """
         return (1 * math.pi * 2 * self.__radius)
