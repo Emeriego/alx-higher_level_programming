@@ -2,6 +2,7 @@
 """Task 6 Defines a class Square.
 """
 
+
 class Square:
     """Class Represents a square.
     """
@@ -24,7 +25,6 @@ class Square:
     def size(self, value):
         """Set the  size of square.
         """
-        return (self.__size)
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -41,7 +41,6 @@ class Square:
     def position(self, value):
         """sets the size of the square.
         """
-        return (self.__size)
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
@@ -63,6 +62,6 @@ class Square:
 
         [print("") for i in range(0, self.__position[1])]
         for item in range(0, self.__size):
-            [print(" ", end="") for j in range(0, self.__position[0])]
+            [print(" ", end="") for m in range(0, self.__position[0])]
             [print("#", end="") for k in range(0, self.__size)]
             print("")

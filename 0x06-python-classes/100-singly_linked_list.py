@@ -1,23 +1,24 @@
 #!/usr/bin/python3
-"""Task7 Defines classes for an S_list."""
+"""Task Defines classes for a S_list.
+"""
 
 
 class Node:
-    """Class Represent a node in an S_list.
-    """
+    """This Represents a node in a s_list."""
 
     def __init__(self, data, next_node=None):
-        """Initializes a new Node.
+        """This Initializes a new Node.
+
         Args:
-            data (int): Data of new Node.
+            data (int): The data of the new Node.
             next_node (Node): The next node of the new Node.
         """
-        self.data = datasss
+        self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
-        """Gets the data of Node.
+        """Gets the data of the Node.
         """
         return (self.__data)
 
@@ -29,34 +30,34 @@ class Node:
 
     @property
     def next_node(self):
-        """Gets the next node.
+        """Gets the next_node of the Node.
         """
         return (self.__next_node)
 
     @next_node.setter
-        """Set the next node.
-        """
-        return (self.__next_node)
     def next_node(self, value):
         if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 class SinglyLinkedList:
-    """Class Represents an S_list.
+    """This Represents a s_list.
     """
 
     def __init__(self):
-        """Initalizes new List.
+        """This Initalizes a new S_List.
         """
         self.__head = None
 
     def sorted_insert(self, value):
-        """Class to Insert a new Node to List.
+        """This Inserts a new Node to the S_List
+
         The node is inserted into the list at the correct
         ordered numerical position.
+
         Args:
-            value (Node): Node to be inserted.
+            value (Node): Enter the new Node to insert.
         """
         new = Node(value)
         if self.__head is None:
@@ -66,19 +67,19 @@ class SinglyLinkedList:
             new.next_node = self.__head
             self.__head = new
         else:
-            curr = self.__head
-            while (curr.next_node is not None and
-                    curr.next_node.data < value):
-                curr = curr.next_node
-            new.next_node = curr.next_node
-            curr.next_node = new
+            t = self.__head
+            while (t.next_node is not None and
+                    t.next_node.data < value):
+                t = t.next_node
+            new.next_node = t.next_node
+            t.next_node = new
 
     def __str__(self):
-        """method Defines the print() representation
+        """This Defines the print() representation of a S_List.
         """
         values = []
-        curr = self.__head
-        while curr is not None:
-            values.append(str(curr.data))
-            curr = curr.next_node
+        t = self.__head
+        while t is not None:
+            values.append(str(t.data))
+            t = t.next_node
         return ('\n'.join(values))

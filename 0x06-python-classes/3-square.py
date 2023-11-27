@@ -2,6 +2,7 @@
 """Task3 to define a class Square.
 """
 
+
 class Square:
     """Class Represents a square object.
     """

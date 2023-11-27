@@ -2,6 +2,7 @@
 """Task 2 to define class Square.
 """
 
+
 class Square:
     """This class Represents a square object.
     """
@@ -11,6 +12,7 @@ class Square:
         Args:
             size (int): This is the size of  new square.
         """
+
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
