@@ -4,7 +4,6 @@ Module Name: matrix_divided
 The module Divides each item in a given matrix a 2D list with a given number
 """
 
-
 def matrix_divided(matrix, div):
     """Tehe module Returns a new matrix a 2D list.
     with the result of the division of given matrix by a number.
