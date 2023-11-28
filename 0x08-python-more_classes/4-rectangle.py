@@ -18,16 +18,25 @@ class Rectangle:
         self.height = height
 
     def __str__(self):
-        """Method Returns an informal and nicely printable string representation
-        of a Rectangle instance usin '#'."""
+        """Method Returns an informal and nicely
+        printable string representation
+        of a Rectangle instance usin '#'.
+
+        Returns:
+            Returns the official string
+        """
+
         if self.__height == 0 or self.__width == 0:
             return ''
-        rec_str = ''
-        for i in range(self.__height):
+
+        f_str = ''
+
+        for idx in range(self.__height):
             for j in range(self.__width):
-                rec_str += '#'
-            rec_str += '\n'
-        return rec_str[:-1]
+                f_str += '#'
+            f_str += '\n'
+
+        return f_str[:-1]
 
     def __repr__(self):
         """A string representation of a Rectangle instance
