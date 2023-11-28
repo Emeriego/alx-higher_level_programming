@@ -20,7 +20,7 @@ class Rectangle:
     def __str__(self):
         """Method Returns an informal and nicely printable string representation
         of a Rectangle instance usin '#'.
-        Return:
+        Returns:
         returns the official string
         """
 
