@@ -39,14 +39,14 @@ class Rectangle:
         return f_str[:-1]
 
     def __repr__(self):
-        """A string representation of a Rectangle instance
-        that is able to recreate a new instance by 
-        using eval() is returned
+        """ Method that returns the string represantion of the instance
 
         Returns:
-            Returns the official string
+            string represenation of the object
+
         """
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)
 
     @property
     def width(self):
