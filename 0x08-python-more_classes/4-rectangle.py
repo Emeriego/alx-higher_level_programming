@@ -40,7 +40,8 @@ class Rectangle:
 
     def __repr__(self):
         """A string representation of a Rectangle instance
-        that is able to recreate a new instance by using eval() is returned
+        that is able to recreate a new instance by 
+        using eval() is returned
 
         Returns:
             Returns the official string
