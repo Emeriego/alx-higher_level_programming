@@ -40,7 +40,7 @@ class Rectangle:
 
     def __repr__(self):
         """A string representation of a Rectangle instance
-        that is able to recreate a new instance by 
+        that is able to recreate a new instance by
         using eval() is returned
 
         Returns:
@@ -86,7 +86,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     def area(self):
         """Uses the params to find the area of Rectangle instance
 
@@ -99,7 +98,8 @@ class Rectangle:
     def perimeter(self):
         """Calculates the perimeter of a Rectangle instance
 
-        Returns: perimeter given by
+        Returns:
+        perimeter given by
         2 * (height + width)
         """
         if self.__height == 0 or self.__width == 0:
