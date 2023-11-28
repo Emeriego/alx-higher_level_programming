@@ -6,7 +6,7 @@ using backtracking
 """
 
 
-def isSafe(m_queen, nqueen):
+def canKill(m_queen, nqueen):
     """ Method that determines if the queens can or can't kill each other
 
     Args:
@@ -18,12 +18,12 @@ def isSafe(m_queen, nqueen):
         False: when some of the queens can kill
     """
 
-    for i in range(nqueen):
+    for idx in range(nqueen):
 
-        if m_queen[i] == m_queen[nqueen]:
+        if m_queen[idx] == m_queen[nqueen]:
             return False
 
-        if abs(m_queen[i] - m_queen[nqueen]) == abs(i - nqueen):
+        if abs(m_queen[idx] - m_queen[nqueen]) == abs(idx - nqueen):
             return False
 
     return True
@@ -38,12 +38,12 @@ def print_result(m_queen, nqueen):
 
     """
 
-    res = []
+    outcome = []
 
-    for i in range(nqueen):
-        res.append([i, m_queen[i]])
+    for idx in range(nqueen):
+        outcome.append([idx, m_queen[idx]])
 
-    print(res)
+    print(outcome)
 
 
 def Queen(m_queen, nqueen):
@@ -65,7 +65,7 @@ def Queen(m_queen, nqueen):
 
         m_queen[nqueen] += 1
 
-        if isSafe(m_queen, nqueen) is True:
+        if canKill(m_queen, nqueen) is True:
 
             if nqueen is not len(m_queen):
                 Queen(m_queen, nqueen + 1)
@@ -79,7 +79,7 @@ def solveNQueen(size):
 
     """
 
-    m_queen = [-1 for i in range(size)]
+    m_queen = [-1 for idx in range(size)]
 
     Queen(m_queen, 0)
 
