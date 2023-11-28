@@ -18,7 +18,8 @@ class Rectangle:
         self.height = height
 
     def __str__(self):
-        """Method Returns an informal and nicely printable string representation
+        """Method Returns an informal and nicely printable
+        string representation
         of a Rectangle instance usin '#'."""
         if self.__height == 0 or self.__width == 0:
             return ''
@@ -38,7 +39,6 @@ class Rectangle:
     def __del__(self):
         """Method Deletes an instance. using 'Del instance()'"""
         print("Bye rectangle...")
-
 
     @property
     def width(self):
@@ -77,9 +77,9 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     def area(self):
-        """Uses the params to find the area of Rectangle instance
+        """Uses the params to find the area of
+        Rectangle instance
 
         Returns: The area of rectangle, given by height * width
         """
