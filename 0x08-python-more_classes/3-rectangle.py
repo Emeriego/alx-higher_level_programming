@@ -19,7 +19,11 @@ class Rectangle:
 
     def __str__(self):
         """Method Returns an informal and nicely printable string representation
-        of a Rectangle instance usin '#'."""
+        of a Rectangle instance usin '#'.
+        Return:
+        returns the official string
+        """
+
         if self.__height == 0 or self.__width == 0:
             return ''
         f_str = ''
@@ -56,7 +60,6 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """method Sets the height of new instance
-
         Args:
             value: value of the width, is only valid
             if it is a +ve integer
