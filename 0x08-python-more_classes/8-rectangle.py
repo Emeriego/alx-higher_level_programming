@@ -6,7 +6,7 @@ The class reprrsents a Rectangle.
 
 class Rectangle:
     """This class is defined by width and height.
-    
+
     Attributes:
         number_of_instances: number of Rectangle instances,
         increments on every instance creation,
@@ -29,7 +29,8 @@ class Rectangle:
         Rectangle.number_of_instances += 1
 
     def __str__(self):
-        """Method Returns an informal and nicely printable string representation
+        """Method Returns an informal and nicely printable
+        string representation
         of a Rectangle instance usin '#'."""
         if self.__height == 0 or self.__width == 0:
             return ''
@@ -50,7 +51,6 @@ class Rectangle:
         """Method Deletes an instance. using 'Del instance()'"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
 
     @property
     def width(self):
@@ -88,7 +88,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
 
     def area(self):
         """Uses the params to find the area of Rectangle instance
