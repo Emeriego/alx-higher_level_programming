@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module 8-rectangle
+"""Module 9-rectangle
 Defines a Rectangle class.
 """
 
@@ -106,22 +106,33 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Method that Calculates the biggest
-         Rectangle using the area
+        """Finds the biggest Rectangle based on the area
 
         Args:
-            rect_1: first Rectangle instance
-            rect_2: second Rectangle instance
+            rect_1: Rectangle instance
+            rect_2: Rectangle instance different from rect_1
 
         Returns:
-            The largest instance of rectangle or first if equal.
+            The instance with the biggest area,
+            or rect_1 if both rectangles have the same area
         """
-        if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be an instance of Rectangle")
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
-        if rect_1.area() < rect_2.area():
-            return rect_2
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() == rect_2.area() or rect_1.area() > rect_2.area():
             return rect_1
-        
+        if rect_1.area() < rect_2.area():
+            return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """Creates a new Rectangle instance with width == height == size
+
+        Args:
+            size: size to set the new rectangle to
+
+        Returns:
+            The new Rectangle instance
+        """
+        return cls(size, size)
