@@ -21,8 +21,7 @@ class Rectangle:
         """Method Returns an informal and nicely printable string representation
         of a Rectangle instance usin '#'.
 
-        Returns:
-        returns the official string
+        Returns: returns the official string
         """
 
         if self.__height == 0 or self.__width == 0:
