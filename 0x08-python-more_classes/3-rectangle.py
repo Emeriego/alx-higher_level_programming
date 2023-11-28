@@ -66,7 +66,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     def area(self):
         """Uses the params to find the area of Rectangle instance
 
