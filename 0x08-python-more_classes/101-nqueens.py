@@ -6,54 +6,54 @@ using backtracking
 """
 
 
-def canKill(queen_locs_arr, nqueen):
+def canKill(m_queen, nqueen):
     """ Method determines that queens can or can't kill each other
 
     Args:
-        queen_locs_arr: array that has the queens positions
+        m_queen: array that has the queens positions
         nqueen: queen number
 
     Returns: Either true or false depending.
     """
 
     for idx in range(nqueen):
-        if queen_locs_arr[idx] == queen_locs_arr[nqueen]:
+        if m_queen[idx] == m_queen[nqueen]:
             return False
-        if abs(queen_locs_arr[idx] - queen_locs_arr[nqueen]) == abs(idx - nqueen):
+        if abs(m_queen[idx] - m_queen[nqueen]) == abs(idx - nqueen):
             return False
     return True
 
 
-def disp_result(queen_locs_arr, nqueen):
+def disp_result(m_queen, nqueen):
     """ Method that prints the list with the Queens positions
 
     Args:
-        queen_locs_arr: array that has the queens positions
+        m_queen: array that has the queens positions
         nqueen: queen number
     """
     queen_locs = []
     for idx in range(nqueen):
-        queen_locs.append([idx, queen_locs_arr[idx]])
+        queen_locs.append([idx, m_queen[idx]])
     print(queen_locs)
 
-def Queen(queen_locs_arr, nqueen):
+def Queen(m_queen, nqueen):
     """ Recursive function that executes the Backtracking algorithm
 
     Args:
-        queen_locs_arr: array that has the queens positions
+        m_queen: array that has the queens positions
         nqueen: queen number
     """
 
-    if nqueen is len(queen_locs_arr):
-        disp_result(queen_locs_arr, nqueen)
+    if nqueen is len(m_queen):
+        disp_result(m_queen, nqueen)
         return
 
-    queen_locs_arr[nqueen] = -1
-    while((queen_locs_arr[nqueen] < len(queen_locs_arr) - 1)):
-        queen_locs_arr[nqueen] += 1
-        if canKill(queen_locs_arr, nqueen) is True:
-            if nqueen is not len(queen_locs_arr):
-                Queen(queen_locs_arr, nqueen + 1)
+    m_queen[nqueen] = -1
+    while((m_queen[nqueen] < len(m_queen) - 1)):
+        m_queen[nqueen] += 1
+        if canKill(m_queen, nqueen) is True:
+            if nqueen is not len(m_queen):
+                Queen(m_queen, nqueen + 1)
 
 
 def resolveQueen(size):
@@ -62,8 +62,8 @@ def resolveQueen(size):
     Args:
         size: size of the chessboard
     """
-    queen_locs_arr = [-1 for idx in range(size)]
-    Queen(queen_locs_arr, 0)
+    m_queen = [-1 for idx in range(size)]
+    Queen(m_queen, 0)
 
 
 if __name__ == '__main__':

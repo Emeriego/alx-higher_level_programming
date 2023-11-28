@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Module Name: 1-rectangle
-The class reprrsents a Rectangle.
+The class represents a Rectangle.
 """
 
 
@@ -44,6 +44,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """method Sets the height of new instance
+
         Args:
             value: value of the width, is only valid
             if it is a +ve integer
