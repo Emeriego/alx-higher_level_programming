@@ -5,7 +5,8 @@ The class reprrsents a Rectangle.
 
 
 class Rectangle:
-    """This class is defined by width and height."""
+    """This class is defined by width and height.
+    """
 
     def __init__(self, width=0, height=0):
         """Initializes Rectangle instance.
@@ -32,7 +33,8 @@ class Rectangle:
 
     def __repr__(self):
         """A string representation of a Rectangle instance
-        that is able to recreate a new instance by using eval() is returned
+        that is able to recreate a new instance by using
+        eval() is returned
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
@@ -48,7 +50,6 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """method Sets the width of instance
-
         Args:
             value: value of the width, is only valid
             if it is a +ve integer
@@ -88,7 +89,6 @@ class Rectangle:
 
     def perimeter(self):
         """Calculates the perimeter of a Rectangle instance
-
         Returns: perimeter given by
         2 * (height + width)
         """
