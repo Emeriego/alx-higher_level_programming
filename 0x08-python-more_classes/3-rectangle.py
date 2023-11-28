@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module Name: 3-rectangle
+"""Module Name: 2-rectangle
 The class reprrsents a Rectangle.
 """
 
