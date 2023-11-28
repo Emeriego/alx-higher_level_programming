@@ -1,25 +1,25 @@
 #!/usr/bin/python3
-"""Module 3-rectangle
-Defines a Rectangle class.
+"""Module Name: 3-rectangle
+The class reprrsents a Rectangle.
 """
 
 
 class Rectangle:
-    """Rectangle class defined by width and height."""
+    """This class is defined by width and height."""
 
     def __init__(self, width=0, height=0):
-        """Initializes a Rectangle instance.
+        """Initializes Rectangle instance.
 
         Args:
-            width: width of the rectangle
+            width: breadth of rectangle
             height: height of the rectangle
         """
         self.width = width
         self.height = height
 
     def __str__(self):
-        """Returns an informal and nicely printable string representation
-        of a Rectangle instance, filled with the '#' character."""
+        """Method Returns an informal and nicely printable string representation
+        of a Rectangle instance usin '#'."""
         if self.__height == 0 or self.__width == 0:
             return ''
         rec_str = ''
@@ -31,15 +31,16 @@ class Rectangle:
 
     @property
     def width(self):
-        """Retrieves the width of a Rectangle instance."""
+        """This method retrieves the width of the new instance."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Sets the width of a Rectangle instance
+        """method Sets the width of instance
 
         Args:
-            value: value of the width, must be a positive integer
+            value: value of the width, is only valid
+            if it is a +ve integer
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -49,15 +50,15 @@ class Rectangle:
 
     @property
     def height(self):
-        """Retrieves the height of a Rectangle instance."""
+        """method gets the height of new instance."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Sets the height of a Rectangle instance
-
+        """method Sets the height of new instance
         Args:
-            value: value of the height, must be a positive integer
+            value: value of the width, is only valid
+            if it is a +ve integer
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -65,19 +66,20 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    def area(self):
-        """Calculates the area of a Rectangle instance
 
-        Returns:
-            Area of the the rectangle, given by height * width
+    def area(self):
+        """Uses the params to find the area of Rectangle instance
+
+        Returns: The area of rectangle, given by height * width
         """
-        return self.__width * self.__height
+        result = self.__width * self.__height
+        return result
 
     def perimeter(self):
         """Calculates the perimeter of a Rectangle instance
 
-        Returns:
-            Perimeter of the rectangle, given by 2 * (height + width)
+        Returns: perimeter given by
+        2 * (height + width)
         """
         if self.__height == 0 or self.__width == 0:
             return 0
