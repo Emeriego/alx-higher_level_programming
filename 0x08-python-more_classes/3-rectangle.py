@@ -22,12 +22,12 @@ class Rectangle:
         of a Rectangle instance usin '#'."""
         if self.__height == 0 or self.__width == 0:
             return ''
-        rec_str = ''
-        for i in range(self.__height):
+        f_str = ''
+        for idx in range(self.__height):
             for j in range(self.__width):
-                rec_str += '#'
-            rec_str += '\n'
-        return rec_str[:-1]
+                f_str += '#'
+            f_str += '\n'
+        return f_str[:-1]
 
     @property
     def width(self):
@@ -69,7 +69,8 @@ class Rectangle:
     def area(self):
         """Uses the params to find the area of Rectangle instance
 
-        Returns: The area of rectangle, given by height * width
+        Returns:
+        The area of rectangle, given by height * width
         """
         result = self.__width * self.__height
         return result
@@ -77,7 +78,8 @@ class Rectangle:
     def perimeter(self):
         """Calculates the perimeter of a Rectangle instance
 
-        Returns: perimeter given by
+        Returns:
+        perimeter given by
         2 * (height + width)
         """
         if self.__height == 0 or self.__width == 0:
