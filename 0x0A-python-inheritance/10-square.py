@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-"""importing BaseGeometry & Rectangle"""
+"""Module Name: 10-square"""
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 Rectangle = __import__('9-rectangle').Rectangle

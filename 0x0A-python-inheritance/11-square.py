@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-
-"""Write a class MyInt that inherits from int"""
+"""Module Name: 11-square, alternates == and !="""
 
 
 class MyInt(int):
-    """A subclass of class int"""
+    """Subclass of global class int"""
     def __eq__(self, other):
-        """sets the behaviour of == """
+        """alternates == and != """
         return int(self) != other
 
     def __ne__(self, other):
-        """sets the != behavior"""
+        """alternates == and !="""
         return int(self) == other

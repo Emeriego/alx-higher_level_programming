@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 
-"""This module is for 1-my_list"""
+"""Module sorts list"""
 
 
 class MyList(list):
-    """A subclass of list"""
+    """Subclass of the global list"""
     def __init__(self):
-        """initialize the object"""
+        """initialize object"""
         super().__init__()
 
     def print_sorted(self):
-        """print out the sorted list"""
+        """prints sorted list"""
         print(sorted(self))
