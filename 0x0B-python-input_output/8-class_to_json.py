@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-"""Module defines a Python class-to-JSON function."""
+"""Class to JSON"""
 
 
 def class_to_json(obj):
-    """func returns the dictionary represntation of a simple data structure."""
+    """
+    a function that returns the dictionary description with
+    simple data structure
+    args:
+        obj: is an instance of a Class
+        All attributes of the obj Class are serializable:
+    """
+
     return obj.__dict__
