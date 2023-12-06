@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Module add all arguments to a Python
-list and save them to a file."""
+"""Add all arguments to a Python list and save them to a file."""
 import sys
 import os
 
@@ -12,8 +11,8 @@ if __name__ == "__main__":
         __import__('6-load_from_json_file').load_from_json_file
 
     if os.path.isfile("add_item.json"):
-        stuff = load_from_json_file("add_item.json")
+        items = load_from_json_file("add_item.json")
     else:
-        stuff = []
+        items = []
 
-    save_to_json_file(stuff + sys.argv[1:], "add_item.json")
+    save_to_json_file(items + sys.argv[1:], "add_item.json")
