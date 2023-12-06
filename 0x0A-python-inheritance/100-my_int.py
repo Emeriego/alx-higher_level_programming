@@ -10,11 +10,11 @@ def append_after(filename="", search_string="", new_string=""):
         search_string (str): The string to search for within the file.
         new_string (str): The string to insert.
     """
-    txt = ""
-    with open(filename) as hr:
-        for line in hr:
-            txt += line
+    text = ""
+    with open(filename) as r:
+        for line in r:
+            text += line
             if search_string in line:
-                txt += new_string
-    with open(filename, "w") as hw:
-        hw.write(txt)
+                text += new_string
+    with open(filename, "w") as w:
+        w.write(text)
