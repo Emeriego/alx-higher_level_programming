@@ -1,20 +1,14 @@
 #!/usr/bin/python3
-"""Mod creates text file insertion"""
+
+"""Write a class MyInt that inherits from int"""
 
 
-def append_after(filename="", search_string="", new_string=""):
-    """Insert text after each line containing a given string in a file.
+class MyInt(int):
+    """A subclass of class int"""
+    def __eq__(self, other):
+        """sets the behaviour of == """
+        return int(self) != other
 
-    Args:
-        filename (str): The name of the file.
-        search_string (str): The string to search for within the file.
-        new_string (str): The string to insert.
-    """
-    text = ""
-    with open(filename) as r:
-        for line in r:
-            text += line
-            if search_string in line:
-                text += new_string
-    with open(filename, "w") as w:
-        w.write(text)
+    def __ne__(self, other):
+        """sets the != behavior"""
+        return int(self) == other
