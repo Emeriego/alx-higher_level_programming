@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-
-"""Module sorts list"""
+"""Func creates an inherited list class"""
 
 
 class MyList(list):
-    """Subclass of the global list"""
-    def __init__(self):
-        """initialize object"""
-        super().__init__()
+    """Implements sorted printing for the built-in list class."""
 
     def print_sorted(self):
-        """prints sorted list"""
+        """Prints in ascending order."""
         print(sorted(self))
