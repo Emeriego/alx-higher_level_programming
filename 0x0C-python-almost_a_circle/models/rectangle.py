@@ -31,7 +31,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-       '''This is a getter method
+        '''This is a getter method
         private attribute is returned
         '''
         return self.__x
@@ -61,7 +61,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-      ''' This is a setter method
+        ''' This is a setter method
         Sets private attribute
         '''
         self.validate_attr("x", value)
