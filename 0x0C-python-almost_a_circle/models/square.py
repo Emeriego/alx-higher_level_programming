@@ -6,7 +6,7 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Module Representation of Square
+    """Module inherits rectangle
 """
 
     def __init__(self, size, x=0, y=0, id=None):
@@ -23,7 +23,8 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """module Square size setter
-        """
+        """        
+        Rectangle.validate_attr("size", value)
         self.width = value
         self.height = value
 
