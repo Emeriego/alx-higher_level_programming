@@ -36,8 +36,8 @@ class Base:
     def save_to_file(cls, list_objs):
         """serializes a list of objects to a file.
         """
-        filename = f"{cls.__name__}.json"
-        with open(filename, "w") as jsonfile:
+        f_name = f"{cls.__name__}.json"
+        with open(f_name, "w") as jsonfile:
             if list_objs is None:
                 jsonfile.write("[]")
             else:
@@ -76,9 +76,9 @@ class Base:
         Returns:
             a list of instantiated classes.
         """
-        filename = str(cls.__name__) + ".json"
+        f_name = str(cls.__name__) + ".json"
         try:
-            with open(filename, "r") as jsonfile:
+            with open(f_name, "r") as jsonfile:
                 list_dicts = Base.from_json_string(jsonfile.read())
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
@@ -88,16 +88,16 @@ class Base:
     def save_to_file_csv(cls, list_objs):
         """Serializes a list of objects to a csv file.
         """
-        filename = cls.__name__ + ".csv"
-        with open(filename, "w", newline="") as csvfile:
+        f_name = cls.__name__ + ".csv"
+        with open(f_name, "w", newline="") as csvfile:
             if list_objs is None or list_objs == []:
                 csvfile.write("[]")
             else:
                 if cls.__name__ == "Rectangle":
-                    fieldnames = ["id", "width", "height", "x", "y"]
+                    k_names_list = ["id", "width", "height", "x", "y"]
                 else:
-                    fieldnames = ["id", "size", "x", "y"]
-                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                    k_names_list = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(csvfile, k_names_list=k_names_list)
                 for obj in list_objs:
                     writer.writerow(obj.to_dictionary())
 
@@ -105,14 +105,14 @@ class Base:
     def load_from_file_csv(cls):
         """Return a list of classes instantiated from a CSV file.
         """
-        filename = cls.__name__ + ".csv"
+        f_name = cls.__name__ + ".csv"
         try:
-            with open(filename, "r", newline="") as csvfile:
+            with open(f_name, "r", newline="") as csvfile:
                 if cls.__name__ == "Rectangle":
-                    fieldnames = ["id", "width", "height", "x", "y"]
+                    k_names_list = ["id", "width", "height", "x", "y"]
                 else:
-                    fieldnames = ["id", "size", "x", "y"]
-                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
+                    k_names_list = ["id", "size", "x", "y"]
+                list_dicts = csv.DictReader(csvfile, k_names_list=k_names_list)
                 list_dicts = [dict([k, int(v)] for k, v in d.items())
                               for d in list_dicts]
                 return [cls.create(**d) for d in list_dicts]
@@ -124,11 +124,11 @@ class Base:
         """Draws Rectangles and Squares using the turtle module.
         """
         turt = turtle.Turtle()
-        turt.screen.bgcolor("#b7312c")
+        turt.screen.bgcolor("#000")
         turt.pensize(3)
         turt.shape("turtle")
 
-        turt.color("#ffffff")
+        turt.color("#7F88FF")
         for rect in list_rectangles:
             turt.showturtle()
             turt.up()
@@ -141,7 +141,7 @@ class Base:
                 turt.left(90)
             turt.hideturtle()
 
-        turt.color("#b5e3d8")
+        turt.color("#FECFCC")
         for sq in list_squares:
             turt.showturtle()
             turt.up()
