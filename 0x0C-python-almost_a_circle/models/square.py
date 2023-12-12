@@ -24,7 +24,6 @@ class Square(Rectangle):
     def size(self, value):
         """module Square size setter
         """        
-        Rectangle.validate_attr("size", value)
         self.width = value
         self.height = value
 
