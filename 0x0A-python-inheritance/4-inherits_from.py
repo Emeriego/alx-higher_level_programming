@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""This module is for 4-inherits_from"""
+"""Module Name: 4-inherits_from"""
 
 
 def inherits_from(obj, a_class):
