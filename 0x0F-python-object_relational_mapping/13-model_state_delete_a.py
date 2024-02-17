@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Start link class to table in database
+"""
+script that deletes all State objects with a name
+containing the letter a from the database hbtn_0e_6_usa
+
 """
 import sys
 from model_state import Base, State
@@ -14,5 +17,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for instance in session.query(State).order_by(State.id):
-        print(instance.id, instance.name, sep=": ")
+    for record in session.query(State).filter(State.name.like('%a%')):
+        session.delete(record)
+    session.commit()
